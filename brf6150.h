@@ -88,4 +88,16 @@ struct hci_fw_event {
 	__u8 status;
 } __attribute__ ((packed));
 
+#define OMAP_TAG_NOKIA_BT   0x4e01
+
+struct omap_bluetooth_config {
+    u8    chip_type;
+    u8    bt_wakeup_gpio;
+    u8    host_wakeup_gpio;
+    u8    reset_gpio;
+    u8    bt_uart;
+    u8    bd_addr[6];
+    u8    bt_sysclk;
+};
+
 #endif /* __DRIVERS_BLUETOOTH_BRF6150_H */
